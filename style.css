@@ -1,11 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
 
 html { font-size: 62.5%; }
-
+html * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
 body {
 	font-family: 'Lato', sans-serif;
 }
-
 h1 {
 	font-weight: 300;
 	margin: 60px inherit;
@@ -14,11 +16,16 @@ h1 {
 }
 h2 {
 	font-weight: 300;
-	margin: 60px inherit;
+	margin: 40px inherit;
 	font-size: 4.2rem;
 	color: #3A3436;
 }
-
+h3 {
+	font-weight: 700;
+	margin: 20px inherit;
+	font-size: 2.2rem;
+	color: rgba(58,52,54,0.6); /* #3A3436 */
+}
 p {
 	font-weight: 300;
 	font-size: 2.8rem;
@@ -34,44 +41,68 @@ p {
 	color: #72C8B3;
 	padding: 1.2rem 1.8rem;
 }
-.link-btn:active{
+.link-btn:hover {
 	background: #72C8B3;
 	color: #fff;
 }
-.exposition p{
+div.avatar {
+	margin-top: -70px;
+}
+div.avatar-img {
+	margin: 0 auto;
+	height: 140px;
+	width: 140px;
+	border-radius: 70px;
+	background: url(./images/avatar.png) center no-repeat;
+}
+.exposition p, .timeline-content h2 {
 	text-align: left;
 	font-size: 2.4rem;
+	line-height: 3.4rem;
 }
-.exposition img{
+.exposition img {
 	margin: 15px auto;
-	border: 1px solid rgba(0,0,0,0.1);
-	border-radius: 6px;
+	-moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.5);
+	-o-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.5);
+	/*filter:progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=NaN, Strength=5);*/
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 }
-strong {
+strong, .timeline-content p {
 	font-weight: 900;
 	letter-spacing: 2px;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 	text-transform: uppercase;
 	color: #3A3436;
 }
+div.icon-list, div.exposition {
+	border-top: thin solid rgba(0,0,0,0.1);
+}
+
 div.icon-list i{
 	display: block;
-	margin: 1.4rem auto;
+	margin: 2.4rem auto;
 	font-size: 4.6rem;
 	color: #3A3436;
 }
 header {
-	height: 500px;
+	height: 600px;
 	background-image: url(./images/chateau-montbeliard.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 }
+header#about-header{
+	background-image: url(./images/champ.jpg);
+}
 footer {
 	height: 200px;
 	text-align: center;
 	background-color: #2B2728;
-	background-image: url(./images/footer-image.png);
+	background-image: url(./images/pixel-skyline.png);
 	background-repeat: no-repeat;
 	background-position: center bottom;
 }
@@ -79,4 +110,94 @@ footer p{
 	font-weight: 300;
 	color: rgba(255,255,255,0.2);
 	font-size: 1.8rem;
+}
+/* 
+====================
+--    TIMELINE    --
+==================== 
+*/
+#timeline {
+	position: relative;
+	padding: 2rem 0;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}
+#timeline::before {
+	/* this is the vertical line */
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -2px;
+	height: 100%;
+	width: 4px;
+	border-radius: 2px;
+	background: #E3D0BD;
+}
+.timeline-block {
+	position: relative;
+}
+.timeline-block:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.timeline-icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80px;
+	height: 80px;
+	left: 50%;
+	margin-left: -41px;
+	background: #fff;
+	border: solid thin #CF4661;
+	border-radius: 42px;
+	-webkit-transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+}
+.timeline-icon img {
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	margin-left: -20px;
+	margin-top: -20px;
+}
+
+.timeline-content {
+	position: relative;
+	margin-left: 0;
+	margin-bottom: 7rem;
+	width: 45%;
+	float: right;
+	text-align: left;
+}
+.timeline-content h2, .timeline-content p {
+	margin: 0;
+}
+.timeline-content .timeline-date{
+	position: absolute;
+	display: inline-block;
+	left: auto;
+	right: 122%;
+	text-align: right;
+	top: 6px;
+	font-size: 2rem;
+}
+
+
+/* for high resolution display */
+
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+
+	footer img {
+	    background: url(./images/pixel-skylinex2.png) center no-repeat;
+	    background-size: 915px 130px;
+	}
 }
