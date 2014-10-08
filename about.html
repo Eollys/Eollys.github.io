@@ -6,13 +6,24 @@
 	
 	<link rel="stylesheet" href="./font-awesome-4.2.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="./semantic/collections/grid.min.css">
+	<link rel="stylesheet" href="./semantic/collections/menu.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css"> 
 </head>
 <body>
 	<header id="about-header">
-		<!--
-		<nav></nav>
-		-->
+		<nav class="ui menu">
+			<a class="item" href="./index.html">
+				<i class="fa fa-home"></i>
+			</a>
+			<a class="item" href="./index.html">Projects</a>
+			<a class="item" href="./about.html">About</a>
+			<a class="item" href="./index.html">Contact</a>
+			<div class="right menu">
+			    <a class="item">
+			        <i class="fa fa-navicon"></i>
+			    </a>
+			</div>
+		</nav>
 	</header>
 	<section class="ui center aligned page grid">
 		<div class="row">
@@ -62,11 +73,4 @@
 	<footer>
 		<p>copyright © 2014</p>
 	</footer>
-	<script src="./js/jquery-1.11.1.min.js"></script>
-	<script>
-	$(document).ready(function() {
-	   // Votre code ici
-	   console.log("hello");
-	});
-	</script>
 </body>
