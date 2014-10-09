@@ -15,7 +15,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 .dragdealer .red-bar {
   width: 100px;

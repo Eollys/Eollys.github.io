@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+	<title>Template page for romainwirtz.com</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="normalize.css"> 
+	
+	<link rel="stylesheet" href="./font-awesome-4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./semantic/collections/grid.min.css">
+	<link rel="stylesheet" href="./semantic/collections/menu.min.css">
+	<link rel="stylesheet" type="text/css" href="dragdealer.css">
+	<link rel="stylesheet" type="text/css" href="style.css"> 
+</head>
+<body>
+	<div id="carousel" class="dragdealer">
+		<div class="handle">
+			<div class="slide img1">
+				<div class="info">
+					<p class="title">Aston Martin DB4</p>
+					<p class="description"><strong>1959</strong> </p>
+					<p><a class="link-btn" href="./index.html">Voir le projet</a></p>
+				</div>
+			</div>
+			<div class="slide img2">
+				<div class="info">
+					<p class="title">Mercedes-Benz 300SL</p>
+					<p class="description">
+						<strong>1956</strong>
+					</p>
+					<p><a class="link-btn" href="./index.html">Voir le projet</a></p>
+				</div>
+			</div>
+			<div class="slide img3">
+				<div class="info">
+					<p class="title">Ballon d'Alsace</p>
+					<p class="description">
+						<strong>SMIBA</strong>
+					</p>
+					<p><a class="link-btn" href="./index.html">Voir le projet</a></p>
+				</div>
+			</div>	
+			<div class="slide img4">
+				<div class="info">
+					<p class="title">Redesign du site du musée</p>
+					<p class="description">
+						<strong>Musée du Château</strong>
+					</p>
+					<p><a class="link-btn" href="./index.html">Voir le projet</a></p>
+				</div>
+			</div>		
+		</div>
+  	</div>
+	<div id="slider-nav" class="dotstyle dotstyle-dotstroke">
+		<ul>
+			<li class="current"><a href="">Projet 1</a></li>
+			<li class=""><a href="">Projet 2</a></li>
+			<li class=""><a href="">Projet 3</a></li>
+			<li class=""><a href="">Projet 4</a></li>
+		</ul>
+	</div>
+	<script src="./js/jquery-1.11.1.min.js"></script>
+	<script src="./js/dragdealer.min.js"></script>
+	<script src="./js/dots.js"></script>
+	<script>
+	$(document).ready(function() {
+
+		/* draggable carousel */
+	   	var slideshow = new Dragdealer('carousel', {
+			steps: 4,
+			speed: 0.3,
+			loose: true,
+			requestAnimationFrame: true
+		});
+		
+		/* animated dots from slider navigation menu */
+		[].slice.call( document.querySelectorAll( '.dotstyle > ul' ) ).forEach( function( nav ) {
+				new DotNav( nav, {
+					callback : function( idx ) {
+						console.log( idx );
+						idx++;
+						slideshow.setStep(idx,1,false);
+					}
+				} );
+			} );
+	});
+	</script>
+</body>
