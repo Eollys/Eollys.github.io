@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <head>
-	<title>Template page for romainwirtz.com</title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="normalize.css"> 
-	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Welcome — Home Page</title>
+	<meta name="description" content="Welcome to my website - eollys.github.io" />
+	<meta name="keywords" content="home page welcome" />
+	<meta name="author" content="Eollys" />
+	<link rel="stylesheet" type="text/css" href="normalize.css">
 	<link rel="stylesheet" href="./font-awesome-4.2.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="./semantic/collections/grid.min.css">
 	<link rel="stylesheet" href="./semantic/collections/menu.min.css">
@@ -11,40 +15,49 @@
 	<link rel="stylesheet" type="text/css" href="style.css"> 
 </head>
 <body>
+	
 	<div id="carousel" class="dragdealer">
 		<div class="handle">
 			<div class="slide img1">
 				<div class="info">
-					<p class="title">Aston Martin DB4</p>
-					<p class="description"><strong>1959</strong> </p>
-					<p><a class="link-btn" href="./index.html">Voir le projet</a></p>
+					<p class="title">
+						<strong>IUT Montbéliard</strong>
+					</p>
+					<p class="description">Recréer le visuel du site du département MMI</p>
+					<p>
+						<a class="link-btn" href="./index.html">Voir le projet</a>
+					</p>
 				</div>
 			</div>
 			<div class="slide img2">
 				<div class="info">
-					<p class="title">Mercedes-Benz 300SL</p>
-					<p class="description">
-						<strong>1956</strong>
+					<p class="title">
+						<strong>CLA Besançon</strong>
 					</p>
-					<p><a class="link-btn" href="./index.html">Voir le projet</a></p>
+					<p class="description">Réaliser la refonte complète du site English Online France</p>
+					<p>
+						<a class="link-btn" href="./index.html">Voir le projet</a>
+					</p>
 				</div>
 			</div>
 			<div class="slide img3">
 				<div class="info">
-					<p class="title">Ballon d'Alsace</p>
-					<p class="description">
+					<p class="title">
 						<strong>SMIBA</strong>
 					</p>
-					<p><a class="link-btn" href="./index.html">Voir le projet</a></p>
+					<p class="description">Développer un prototype de nouveau site à partir de celui déjà existant</p>
+					<p>
+						<a class="link-btn" href="./index.html">Voir le projet</a>
+					</p>
 				</div>
 			</div>	
 			<div class="slide img4">
 				<div class="info">
-					<p class="title">Redesign du site du musée</p>
-					<p class="description">
-						<strong>Musée du Château</strong>
+					<p class="title"><strong>Musée du Château des Ducs de Würtemberg</strong></p>
+					<p class="description">Réimaginer une nouvelle interface pour le site du musée</p>
+					<p>
+						<a class="link-btn" href="./index.html">Voir le projet</a>
 					</p>
-					<p><a class="link-btn" href="./index.html">Voir le projet</a></p>
 				</div>
 			</div>		
 		</div>
@@ -75,9 +88,10 @@
 		[].slice.call( document.querySelectorAll( '.dotstyle > ul' ) ).forEach( function( nav ) {
 				new DotNav( nav, {
 					callback : function( idx ) {
-						console.log( idx );
+						/*console.log( idx );*/
 						idx++;
 						slideshow.setStep(idx,1,false);
+						slideshow.reflow; /* for responsive wrapper */
 					}
 				} );
 			} );

@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <head>
-	<title>Template page for romainwirtz.com</title>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="normalize.css"> 
 	
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Project Page</title>
+	<meta name="description" content="A page template for the projects" />
+	<meta name="keywords" content="page template projects" />
+	<meta name="author" content="Eollys" />
+	<link rel="stylesheet" type="text/css" href="normalize.css">
 	<link rel="stylesheet" href="./font-awesome-4.2.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="./semantic/collections/grid.min.css">
 	<link rel="stylesheet" href="./semantic/collections/menu.min.css">
-	<link rel="stylesheet" type="text/css" href="style.css"> 
+	<link rel="stylesheet" type="text/css" href="./overlayscale.css" />
+	<link rel="stylesheet" type="text/css" href="./style.css"> 
+	<script src="js/modernizr.custom.js"></script>
 </head>
 <body>
 	<header>
 		<nav class="ui menu">
-			<a class="item" href="./index.html">
-				<i class="fa fa-home"></i>
+			<a class="item" href="./home.html">
 			</a>
-			<a class="item" href="./index.html">Projects</a>
-			<a class="item" href="./about.html">About</a>
-			<a class="item" href="./index.html">Contact</a>
 			<div class="right menu">
-			    <a class="item">
-			        <i class="fa fa-navicon"></i>
+			    <a class="item" id="trigger-overlay">
 			    </a>
 			</div>
 		</nav>
@@ -33,40 +35,76 @@
 				<p><a href="./about.html" class="link-btn">Voir le site</a></p>
 			</div>
 		</div>
-	  	<div class="five column row icon-list">
+	  	<div class="five column row tasks">
 	  		<h3>Tâches réalisées</h3>
 		    <div class="column">
 				<i class="fa fa-stethoscope"></i>
-				<strong>Audit</strong>
+				<p>Audit</p>
 		    </div>
 		    <div class="column">
 				<i class="fa fa-pencil"></i>
-				<strong>Conception</strong>
+				<p>Conception<p>
 		    </div>
 		    <div class="column">
 				<i class="fa fa-wrench"></i>
-				<strong>Développement</strong>
+				<p>Développement<p>
 		    </div>
 		    <div class="column">
 				<i class="fa fa-puzzle-piece"></i>
-				<strong>Intégration</strong>
+				<p>Intégration<p>
 		    </div>
 		    <div class="column">
 				<i class="fa fa-comments-o"></i>
-				<strong>Formation</strong>
+				<p>Formation<p>
 		    </div>
+	  	</div>
+	  	<div class="row award">	  		
+	  		<div class="column">
+	  			
+				<h3>Mention spéciale</h3>
+		      	<i class="fa fa-trophy"></i>
+		      	<p>Ce projet a répondu à la demande de l'établissement dans son intégralité et a été accompli dans les délais. Une fièreté !</p>
+		      	<p>
+		      		<a href="./about.html" class="link-btn">Lire la lettre de recommandation</a>
+		      	</p>
+	  		</div>
+	  	</div>
+	  	<div class="row award">
+	  		<div class="column">
+				<h3>Projet étudiant</h3>
+		      	<i class="fa fa-mortar-board"></i>
+		      	<p>Ce projet a été réalisé au cours de ma formation en Licence Professionnelle de Web Design.</p>
+	  		</div>
 	  	</div>
 	  	<div class="row">
-		    <div class="column exposition">
-		      	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-		      	<img src="http://placehold.it/900x500">
-		      	<img src="http://placehold.it/900x500">
+		    <div class="column exposition">	
+		      	<img src="./images/mmi-1.jpg">
+		      	<img src="./images/mmi-2.jpg">
 				<h2>Lumière sur une partie du projet</h2>
-				<p>Généralement, on utilise un texte en faux latin (le texte ne veut rien dire, il a été modifié), le Lorem ipsum ou Lipsum, qui permet donc de faire office de texte d'attente. L'avantage de le mettre en latin est que l'opérateur sait au premier coup d'œil que la page contenant ces lignes n'est pas valide, et surtout l'attention du client n'est pas dérangée par le contenu, il demeure concentré seulement sur l'aspect graphique.</p>
-		      	<img src="http://placehold.it/800x400">
+				<p>Le travail donné consiste à concevoir des maquettes d'interfaces numérique du futur site du département des Métiers du Multimédia et de L'Internet. Ces interfaces sont réalisés suivant un système de grille. Le rendu des maquettes d'interface se fait notamment à travers l'usage d'un logiciel de wireframing. Il était aussi convenu à travers la réalisation de maquettes d'élaborer le story telling du futur site MMI.</p>
+		      	<img src="./images/mmi-3.jpg">
 		    </div>
 	  	</div>
+	  	<div class="overlay overlay-scale"> <!-- or overlay-slidedown -->
+			<button type="button" class="overlay-close">
+				
+			</button>
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+					<li class="social">
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
 	</section>
+	<script src="js/classie.js"></script>
+	<script src="js/fullscreenmenu.js"></script>
 	<footer>
 		<p>copyright © 2014</p>
 	</footer>

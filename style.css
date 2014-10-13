@@ -4,7 +4,21 @@ html { font-size: 62.5%; }
 html * {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* remove the highlight on mobile devices */
 }
+*::selection {
+	background: rgba(58,52,54,0.7); 
+	color: #fff;
+}
+*::-moz-selection {
+	background: rgba(58,52,54,0.7);  
+	color: #fff;
+}
+*::-webkit-selection {
+	background: rgba(58,52,54,0.7);  
+	color: #fff;
+}
+
 body {
 	font-family: 'Lato', sans-serif;
 }
@@ -15,16 +29,11 @@ h1 {
 	color: #3A3436;
 }
 h2 {
-	font-weight: 300;
+	font-weight: 400;
 	margin: 40px inherit;
-	font-size: 4.2rem;
+	letter-spacing: 1px;
+	font-size: 2.8rem;
 	color: #3A3436;
-}
-h3 {
-	font-weight: 700;
-	margin: 20px inherit;
-	font-size: 2.2rem;
-	color: rgba(58,52,54,0.6); /* #3A3436 */
 }
 p {
 	font-weight: 300;
@@ -43,16 +52,25 @@ header>nav.ui.menu{
 	box-shadow: none;
 }
 header>nav.ui.menu a.item{
-	font-size: 1.6rem;
-	font-weight: 700;
-	color: #fff;
-	letter-spacing: 4px;
+	width: 8rem;
+	height: 8rem;
+	margin: 20px;
+	padding: 0;	
 	border: 0;
-	text-transform: uppercase;
+	background-size: 100%;
+}
+header nav.ui.menu>a.item{
+	background: url(./images/logorw.svg) center no-repeat;
+	background-size: 100%;
+}
+header nav.ui.menu>div.right.menu>a.item{
+	background: url(./images/navicon.svg) center no-repeat;
+	background-size: 100%;
 }
 header>nav.ui.menu a.item:hover{
 	background-color: transparent;	
 }
+
 /*
 
 IMAGE CAROUSEL
@@ -79,16 +97,20 @@ IMAGE CAROUSEL
 	background-size: cover;
 }
 .slide.img1{
-	background: url(./images/champ.jpg);
+	/*background: url(./images/champ.jpg);*/
+	background-color: #DF5446;
 }
 .slide.img2{
-	background: url(./images/paysage.jpg);
+	/*background: url(./images/paysage.jpg);*/
+	background-color: #FCB857;
 }
 .slide.img3{
-	background: url(./images/cerises.jpg);
+	/*background: url(./images/cerises.jpg);*/
+	background-color: #72C8B3;
 }
 .slide.img4{
-	background: url(./images/chateau-montbeliard.jpg);
+	/*background: url(./images/paysage-rw.jpg);*/
+	background-color: #DCC4AC;
 }
 
 .info{
@@ -97,11 +119,19 @@ IMAGE CAROUSEL
 }
 .info p{
 	text-align: center;
-	font-size: 4.8rem;
-	font-weight: 300;
 	color: #fff;
+	margin-left: 10%;
+	margin-right: 10%;
+
 }
-.info strong{
+.info p.description{
+	font-size: 7rem;
+	line-height: 7.4rem;
+	font-weight: 300;
+	margin-top: 3rem;
+	
+}
+.info p strong{
 	font-weight: 700;
 	color: #fff;
 }
@@ -121,6 +151,7 @@ IMAGE CAROUSEL
 	width: 300px;
 	text-align: center;
 }
+
 /* Styling Dots from Slider Navigation Menu */
 
 .dotstyle ul {
@@ -184,6 +215,11 @@ IMAGE CAROUSEL
 
 /*------------------------------------------------------*/
 
+/* 
+====================
+--    PROJECTS    --
+==================== 
+*/
 .link-btn{
 	border: 1px solid #72C8B3;
 	border-radius: 1rem;
@@ -207,42 +243,69 @@ div.avatar-img {
 	border-radius: 70px;
 	background: url(./images/avatar.png) center no-repeat;
 }
-.exposition p, .timeline-content h2 {
+.exposition h2{
+	text-align: left;
+}
+.exposition p, .timeline-content h2{
 	text-align: left;
 	font-size: 2.4rem;
-	line-height: 3.4rem;
+	line-height: 4.2rem;
 }
 .exposition img {
 	margin: 15px auto;
-	-moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.5);
-	-webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.5);
-	-o-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.5);
-	box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.3);
+	-o-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.3);
 	/*filter:progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=NaN, Strength=5);*/
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px;
 }
-strong, .timeline-content p {
+.timeline-content p, h3 {
 	font-weight: 900;
 	letter-spacing: 2px;
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	color: #3A3436;
 }
-div.icon-list, div.exposition {
-	border-top: thin solid rgba(0,0,0,0.1);
+/* award row */
+div.row.award .column, 
+div.five.column.row.tasks{
+	padding-top: 3rem;
+}
+div.award .column{
+	width: 50% !important;
+}
+div.award .column i.fa {
+	font-size: 5rem;
+	padding: 25px;
+	margin-top: 25px;
+	color: white;
+	text-align: center;
+	background-color: #CF4661;
+	height: 5rem;
+	width: 5rem;
+	border-radius: 5rem;
 }
 
-div.icon-list i{
+/* tasks row */
+div.tasks, div.award>.column {
+	border-top: thin solid rgba(0,0,0,0.1);
+}
+div.tasks i{
 	display: block;
-	margin: 2.4rem auto;
+	margin-top: 2rem;
 	font-size: 4.6rem;
+	color: #3A3436;
+}
+div.tasks p, .award p{
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-size: 1.8rem;
 	color: #3A3436;
 }
 header {
 	height: 600px;
-	background: url(./images/chateau-montbeliard.jpg) no-repeat center fixed;
+	background: url(./images/chateau-montbeliard.jpg) no-repeat center;
+	background-attachment: fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -358,16 +421,22 @@ footer p{
 }
 
 /* higher resolution images */
-/*
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-max-device-pixel-ratio: 2/1), only screen and (max--moz-device-pixel-ratio: 2), only screen and (max-device-pixel-ratio: 2) {
+	
+	header {
+		height: 400px;
+		background-attachment: none;
+	}
+
 	footer {
 		background: url(./images/pixel-skyline.png) center no-repeat;
 	}	
+
 }
-*/
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-max-device-pixel-ratio: 2/1), only screen and (max--moz-device-pixel-ratio: 2), only screen and (max-device-pixel-ratio: 2) {
 	footer {
 		background: url(./images/pixel-skyline@x2.png) center no-repeat;
-	    background-size: 915px 130px;
 	}
 }
