@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <head>
-	
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -87,12 +86,11 @@
 	  	</div>
 	  	<div class="overlay overlay-scale"> <!-- or overlay-slidedown -->
 			<button type="button" class="overlay-close">
-				
 			</button>
 			<nav>
 				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
+					<li><a href="./home.html">Accueil</a></li>
+					<li><a href="./about.html">A propos</a></li>
 					<li><a href="#">Contact</a></li>
 					<li class="social">
 						<a href="#"><i class="fa fa-twitter"></i></a>
@@ -103,9 +101,22 @@
 			</nav>
 		</div>
 	</section>
+	<script src="./js/jquery-1.11.1.min.js"></script>
 	<script src="js/classie.js"></script>
 	<script src="js/fullscreenmenu.js"></script>
+	<script>
+	$(document).ready(function() {
+
+		/* fading navicon when clicking on it */
+		$( 'a#trigger-overlay' ).click(function() {
+			$( '.ui.menu' ).fadeOut(200);
+		});
+		$( '.overlay-close' ).click(function() {
+			$( '.ui.menu' ).fadeIn(200);
+		});
+	});
+	</script>
 	<footer>
-		<p>copyright © 2014</p>
+		<p>©2014 Juste ici pour décorer</p>
 	</footer>
 </body>

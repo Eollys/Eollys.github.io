@@ -11,24 +11,21 @@
 	<link rel="stylesheet" href="./font-awesome-4.2.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="./semantic/collections/grid.min.css">
 	<link rel="stylesheet" href="./semantic/collections/menu.min.css">
+	<link rel="stylesheet" type="text/css" href="./overlayscale.css" />
 	<link rel="stylesheet" type="text/css" href="style.css"> 
+	<script src="js/modernizr.custom.js"></script>
 </head>
-<body>
-	<header id="about-header">
+<body id="about-page">
+	<header>
 		<nav class="ui menu">
-			<a class="item" href="./index.html">
-				<i class="fa fa-home"></i>
+			<a class="item" href="./home.html">
 			</a>
-			<a class="item" href="./index.html">Projects</a>
-			<a class="item" href="./about.html">About</a>
-			<a class="item" href="./index.html">Contact</a>
 			<div class="right menu">
-			    <button class="item" id="trigger-overlay" type="button">
-			    	<i class="fa fa-navicon"></i>
-			    </button>
+			    <a class="item" id="trigger-overlay">
+			    </a>
 			</div>
 		</nav>
-	</header>
+	</header><!-- header with hero img and menu buttons -->
 	<section class="ui center aligned page grid">
 		<div class="row">
 			<div class="avatar">
@@ -38,7 +35,8 @@
 			<p>Je suis titulaire une Licence Professionnelle en Web Design ainsi que d'un Diplôme Univeristaire de Technologie en Informatique. Aussi bien développeur Front-End que Back-End.  Et ayant une expérience en développement web Back Office et une expérience confirmé en tant de développeur Front-End, je bénéficie d'un profil polyvalent et informé. Je suis capable de mener un projet web à bout dans l'intégralité de son cheminement. D'autre part je mène une veille constate en design comme en développement dans le domaine du web afin d'être au cournat des dernières technologies & tendances.</p>
 			<p><a href="" class="link-btn">Voir mon CV</a></p>
 			<h2>Mon cursus</h2>
-		</div>
+		</div><!-- Self introduction row -->
+
 		<div class="row" id="timeline">
 
 			<div class="timeline-block">
@@ -51,7 +49,6 @@
 		            <span class="timeline-date">Juin 2010</span>
 		        </div> <!-- timeline-content -->
 		    </div> <!-- timeline-block -->
-
 		    
 			<div class="timeline-block">
 		        <div class="timeline-icon">
@@ -118,8 +115,39 @@
 		            <span class="timeline-date">Août 2014</span>
 		        </div> <!-- timeline-content -->
 		    </div> <!-- timeline-block -->
-		</div>
+		</div><!-- timeline -->
+
+		<div class="overlay overlay-scale"> <!-- ..or overlay-slidedown -->
+			<button type="button" class="overlay-close"></button>
+			<nav>
+				<ul>
+					<li><a href="./home.html">Accueil</a></li>
+					<li><a href="./about.html">A propos</a></li>
+					<li><a href="#">Contact</a></li>
+					<li class="social">
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div> <!-- full-screen menu (overlay) -->
 	</section>
+	<script src="./js/jquery-1.11.1.min.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/fullscreenmenu.js"></script>
+	<script>
+	$(document).ready(function() {
+
+		/* fading navicon when clicking on it */
+		$( 'a#trigger-overlay' ).click(function() {
+			$( '.ui.menu' ).fadeOut(200);
+		});
+		$( '.overlay-close' ).click(function() {
+			$( '.ui.menu' ).fadeIn(200);
+		});
+	});
+	</script>
 	<footer>
 		<p>©2014 Juste ici pour décorer</p>
 	</footer>

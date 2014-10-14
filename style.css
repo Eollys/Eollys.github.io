@@ -30,7 +30,8 @@ h1 {
 }
 h2 {
 	font-weight: 400;
-	margin: 40px inherit;
+	margin-top: 40px;
+	margin-bottom: 30px;
 	letter-spacing: 1px;
 	font-size: 2.8rem;
 	color: #3A3436;
@@ -39,35 +40,42 @@ p {
 	font-weight: 300;
 	font-size: 2.8rem;
 	color: #3A3436;
-	line-height: 3.8rem;
+	line-height: 4rem;
+}
+
+body#home-page nav{
+	background: none;
+	position: absolute;
+	width: 100%;
+	z-index: 100;
 }
 /*
 
 HEADER NAVIGATION
 
 */
-header>nav.ui.menu{
+nav.ui.menu{
 	background: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
-header>nav.ui.menu a.item{
-	width: 8rem;
-	height: 8rem;
-	margin: 20px;
+nav.ui.menu a.item{
+	width: 6rem;
+	height: 6rem;
+	margin: 5rem;
 	padding: 0;	
 	border: 0;
 	background-size: 100%;
 }
-header nav.ui.menu>a.item{
+nav.ui.menu>a.item{
 	background: url(./images/logorw.svg) center no-repeat;
 	background-size: 100%;
 }
-header nav.ui.menu>div.right.menu>a.item{
+nav.ui.menu>div.right.menu>a.item{
 	background: url(./images/navicon.svg) center no-repeat;
 	background-size: 100%;
 }
-header>nav.ui.menu a.item:hover{
+nav.ui.menu a.item:hover{
 	background-color: transparent;	
 }
 
@@ -248,8 +256,9 @@ div.avatar-img {
 }
 .exposition p, .timeline-content h2{
 	text-align: left;
+	font-weight: 300;
 	font-size: 2.4rem;
-	line-height: 4.2rem;
+	line-height: 3.8rem;
 }
 .exposition img {
 	margin: 15px auto;
@@ -311,7 +320,7 @@ header {
     -o-background-size: cover;
     background-size: cover;
 }
-header#about-header{
+body#about-page header{
 	background-image: url(./images/champ.jpg);
 }
 footer {
@@ -394,15 +403,15 @@ footer p{
 .timeline-content h2, .timeline-content p {
 	margin: 0;
 }
-.timeline-content .timeline-date{
+.timeline-date{
 	position: absolute;
 	display: inline-block;
 	left: auto;
 	right: 122%;
-	text-align: right;
-	top: 6px;
+	text-align: center;
+	top: 12px;
 	font-size: 2rem;
-}
+	color: rgba(58,52,54,0.6);
 
 @media screen and (max-width: 640px) { 
 	.timeline-icon {
@@ -421,22 +430,29 @@ footer p{
 }
 
 /* higher resolution images */
+@media screen and (max-width: 650px){
+	header {
+		height: 400px;
+		background-attachment: inherit;
+	}
+	header nav.ui.menu a.item{
+		margin: 20px;
+		width: 5rem;
+		height: 5rem;
+	}
+
+}
+
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-max-device-pixel-ratio: 2/1), only screen and (max--moz-device-pixel-ratio: 2), only screen and (max-device-pixel-ratio: 2) {
 	
 	header {
 		height: 400px;
-		background-attachment: none;
+		background-attachment: inherit;
 	}
 
 	footer {
 		background: url(./images/pixel-skyline.png) center no-repeat;
 	}	
 
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-max-device-pixel-ratio: 2/1), only screen and (max--moz-device-pixel-ratio: 2), only screen and (max-device-pixel-ratio: 2) {
-	footer {
-		background: url(./images/pixel-skyline@x2.png) center no-repeat;
-	}
 }
