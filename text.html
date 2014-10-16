@@ -3,8 +3,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Project Page</title>
-	<meta name="description" content="A page template for the projects" />
+	<title>Text Testing Page</title>
+	<meta name="description" content="Text display on different devices" />
 	<meta name="keywords" content="page template projects" />
 	<meta name="author" content="Eollys" />
 	<link rel="stylesheet" type="text/css" href="normalize.css">
@@ -15,26 +15,25 @@
 	<link rel="stylesheet" type="text/css" href="./style.css"> 
 	<script src="js/modernizr.custom.js"></script>
 </head>
-<body>
+<body id="text-template">
 	<header>
 		<nav class="ui menu">
-			<a class="item" href="./home.html">
-			</a>
+			<a class="item" href="./home.html"></a>
 			<div class="right menu">
-			    <a class="item" id="trigger-overlay">
-			    </a>
+				<a class="item" id="trigger-overlay"></a>
 			</div>
 		</nav>
 	</header>
 	<section class="ui center aligned page grid">
 		<div class="row">
-			<div class="column">
-				<h1>Recréer le visuel du site du département MMI</h1>
+			<div class="column caption">
+				<h1>Réimaginer une nouvelle interface pour le site du musée</h1>
 				<p>Le faux-texte (également appelé lorem ipsum, lipsum) est, en imprimerie, un texte sans valeur sémantique, permettant de remplir des pages lors d'une mise en forme afin d'en calibrer le contenu en l'absence du texte définitif.</p>
-				<p><a href="./about.html" class="link-btn">Voir le site</a></p>
+				<p>Généralement, on utilise un texte en faux latin (le texte ne veut rien dire, il a été modifié), le Lorem ipsum ou Lipsum, qui permet donc de faire office de texte d'attente.</p>
+				<a href="./about.html" class="link-btn">Voir le site</a>
 			</div>
 		</div>
-	  	<div class="five column row tasks">
+		<div class="five column row tasks">
 	  		<h3>Tâches réalisées</h3>
 		    <div class="column">
 				<i class="fa fa-stethoscope"></i>
@@ -57,15 +56,27 @@
 				<p>Formation<p>
 		    </div>
 	  	</div>
+		<div class="row">
+		    <div class="column exposition">	
+				<h2>Se familiariser au design d'interface</h2>
+				<p>Le travail donné consiste à concevoir des maquettes d'interfaces numérique du prochain site du département des Métiers du Multimédia et de L'Internet.</p> 
+				<p>Ces interfaces sont réalisés suivant un système de grille. Le rendu des mock-ups se fait notamment à travers l'usage d'un logiciel de wireframing Axure Pro en plus d'un logiciel d'édition de visuel comme Adobe Illustrator. Il est aussi convenu de respecter à travers la réalisation des maquettes une cohérence dans la navigation au sein du futur site MMI.</p>
+		    </div>
+	  	</div>
+	  	<div class="row">
+		    <div class="column exposition">	
+				<h2>Un modèle de page pour chaque thème abordé</h2>
+				<p>Le projet met en évidence 4 modèles distincts selon l'architecture de l'information définie au préalable. Les projets, la page d'accueil, les formations puis les actus.</p> 
+				<p>Les modèles de page sont présenté ici dans l'ordre dans lesquels ils viennent d'être énumérés.</p>
+		    </div>
+	  	</div>
+	  	
 	  	<div class="row award">	  		
 	  		<div class="column">
-	  			
 				<h3>Mention spéciale</h3>
 		      	<i class="fa fa-trophy"></i>
 		      	<p>Ce projet a répondu à la demande de l'établissement dans son intégralité et a été accompli dans les délais. Une fièreté !</p>
-		      	<p>
-		      		<a href="./about.html" class="link-btn">Lire la lettre de recommandation</a>
-		      	</p>
+		      	<a href="./about.html" class="link-btn">Lire la lettre de recommandation</a>
 	  		</div>
 	  	</div>
 	  	<!-- PROJET ETUDIANT
@@ -77,15 +88,6 @@
 	  		</div>
 	  	</div>
 	  	-->
-	  	<div class="row">
-		    <div class="column exposition">	
-		      	<img src="./images/mmi-1.jpg">
-		      	<img src="./images/mmi-2.jpg">
-				<h2>Lumière sur une partie du projet</h2>
-				<p>Le travail donné consiste à concevoir des maquettes d'interfaces numérique du futur site du département des Métiers du Multimédia et de L'Internet. Ces interfaces sont réalisés suivant un système de grille. Le rendu des maquettes d'interface se fait notamment à travers l'usage d'un logiciel de wireframing. Il était aussi convenu à travers la réalisation de maquettes d'élaborer le story telling du futur site MMI.</p>
-		      	<img src="./images/mmi-3.jpg">
-		    </div>
-	  	</div>
 	  	<div class="overlay overlay-scale"> <!-- or overlay-slidedown -->
 			<button type="button" class="overlay-close">
 			</button>
@@ -103,6 +105,12 @@
 			</nav>
 		</div>
 	</section>
+	<div class="project next">
+		<a href="./index.html">
+			<h3>Projet suivant</h3>
+			<p>Recréer le visuel du site du département MMI</p>
+		</a>
+	</div>
 	<script src="./js/jquery-1.11.1.min.js"></script>
 	<script src="js/classie.js"></script>
 	<script src="js/fullscreenmenu.js"></script>
@@ -119,6 +127,6 @@
 	});
 	</script>
 	<footer>
-		<p>©2014 Juste ici pour décorer</p>
+		<p>©2014 Eollys</p>
 	</footer>
 </body>
