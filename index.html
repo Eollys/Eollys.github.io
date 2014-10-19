@@ -3,109 +3,104 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Project Page</title>
-	<meta name="description" content="A page template for the projects" />
-	<meta name="keywords" content="page template projects" />
+	<title>Welcome — Home Page</title>
+	<meta name="description" content="Welcome to my website - eollys.github.io" />
+	<meta name="keywords" content="home page welcome" />
 	<meta name="author" content="Eollys" />
 	<link rel="stylesheet" type="text/css" href="normalize.css">
 	<link rel="stylesheet" href="./font-awesome-4.2.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="./semantic/collections/grid.min.css">
 	<link rel="stylesheet" href="./semantic/collections/menu.min.css">
-	<link rel="stylesheet" type="text/css" href="./overlayscale.css" />
-	<link rel="stylesheet" type="text/css" href="./style.css"> 
+	<link rel="stylesheet" type="text/css" href="overlayscale.css" />
+	<link rel="stylesheet" type="text/css" href="dragdealer.css">
+	<link rel="stylesheet" type="text/css" href="style.css"> 
 	<script src="js/modernizr.custom.js"></script>
 </head>
-<body>
-	<header>
-		<nav class="ui menu">
-			<a class="item" href="./home.html">
-			</a>
-			<div class="right menu">
-			    <a class="item" id="trigger-overlay">
-			    </a>
+<body id="home-page">
+	<nav class="ui menu">
+		<a class="item" href="./index.html">
+		</a>
+		<div class="right menu">
+		    <a class="item" id="trigger-overlay">
+		    </a>
+		</div>
+	</nav>
+	<div id="carousel" class="dragdealer">
+		<div class="handle">
+			<div class="slide step1">
+				<div class="info">
+					<p class="title">
+						<strong>CLA Besançon</strong>
+					</p>
+					<p class="description">Réaliser la refonte complète du site English Online France</p>
+					<p>
+						<a class="link-btn" href="./case1.html">Voir le projet</a>
+					</p>
+				</div>
 			</div>
+			<div class="slide step2">
+				<div class="info">
+					<p class="title">
+						<strong>SMIBA</strong>
+					</p>
+					<p class="description">Développer un prototype de nouveau site à partir de celui déjà existant</p>
+					<p>
+						<a class="link-btn" href="./case2.html">Voir le projet</a>
+					</p>
+				</div>
+			</div>
+			<div class="slide step3">
+				<div class="info">
+					<p class="title">
+						<strong>IUT Montbéliard</strong>
+					</p>
+					<p class="description">Recréer le visuel du site du département MMI</p>
+					<p>
+						<a class="link-btn" href="./case3.html">Voir le projet</a>
+					</p>
+				</div>
+			</div>	
+			<div class="slide step4">
+				<div class="info">
+					<p class="title"><strong>Musée du Château des Ducs de Würtemberg</strong></p>
+					<p class="description">Réimaginer une nouvelle interface pour le site du musée</p>
+					<p>
+						<a class="link-btn" href="./case4.html">Voir le projet</a>
+					</p>
+				</div>
+			</div>		
+		</div>
+  	</div>
+	<div id="slider-nav" class="dotstyle dotstyle-dotstroke">
+		<ul>
+			<li class="current"><a href="">Projet 1</a></li>
+			<li class=""><a href="">Projet 2</a></li>
+			<li class=""><a href="">Projet 3</a></li>
+			<li class=""><a href="">Projet 4</a></li>
+		</ul>
+	</div>
+	<div class="overlay overlay-scale"> <!-- ..or overlay-slidedown -->
+		<button type="button" class="overlay-close"></button>
+		<nav>
+			<ul>
+				<li><a href="./index.html">Accueil</a></li>
+				<li><a href="./projets.html">Projets</a></li>
+				<li><a href="./about.html">A propos</a></li>
+				<li class="separator"><p>//</p></li>
+				<li class="contact"><a href="mailto:romainwirtz2@gmail.com">romainwirtz2@gmail.com</a></li>
+				<li class="social">
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i>
+					</a>
+				</li>
+			</ul>
 		</nav>
-	</header>
-	<section class="ui center aligned page grid">
-		<div class="row">
-			<div class="column">
-				<h1>Recréer le visuel du site du département MMI</h1>
-				<p>Le faux-texte (également appelé lorem ipsum, lipsum) est, en imprimerie, un texte sans valeur sémantique, permettant de remplir des pages lors d'une mise en forme afin d'en calibrer le contenu en l'absence du texte définitif.</p>
-				<p><a href="./about.html" class="link-btn">Voir le site</a></p>
-			</div>
-		</div>
-	  	<div class="five column row tasks">
-	  		<h3>Tâches réalisées</h3>
-		    <div class="column">
-				<i class="fa fa-stethoscope"></i>
-				<p>Audit</p>
-		    </div>
-		    <div class="column">
-				<i class="fa fa-pencil"></i>
-				<p>Conception<p>
-		    </div>
-		    <div class="column">
-				<i class="fa fa-wrench"></i>
-				<p>Développement<p>
-		    </div>
-		    <div class="column">
-				<i class="fa fa-puzzle-piece"></i>
-				<p>Intégration<p>
-		    </div>
-		    <div class="column">
-				<i class="fa fa-comments-o"></i>
-				<p>Formation<p>
-		    </div>
-	  	</div>
-	  	<div class="row award">	  		
-	  		<div class="column">
-	  			
-				<h3>Mention spéciale</h3>
-		      	<i class="fa fa-trophy"></i>
-		      	<p>Ce projet a répondu à la demande de l'établissement dans son intégralité et a été accompli dans les délais. Une fièreté !</p>
-		      	<p>
-		      		<a href="./about.html" class="link-btn">Lire la lettre de recommandation</a>
-		      	</p>
-	  		</div>
-	  	</div>
-	  	<!-- PROJET ETUDIANT
-	  	<div class="row award">
-	  		<div class="column">
-				<h3>Projet étudiant</h3>
-		      	<i class="fa fa-mortar-board"></i>
-		      	<p>Ce projet a été réalisé au cours de ma formation en Licence Professionnelle de Web Design.</p>
-	  		</div>
-	  	</div>
-	  	-->
-	  	<div class="row">
-		    <div class="column exposition">	
-		      	<img src="./images/mmi-1.jpg">
-		      	<img src="./images/mmi-2.jpg">
-				<h2>Lumière sur une partie du projet</h2>
-				<p>Le travail donné consiste à concevoir des maquettes d'interfaces numérique du futur site du département des Métiers du Multimédia et de L'Internet. Ces interfaces sont réalisés suivant un système de grille. Le rendu des maquettes d'interface se fait notamment à travers l'usage d'un logiciel de wireframing. Il était aussi convenu à travers la réalisation de maquettes d'élaborer le story telling du futur site MMI.</p>
-		      	<img src="./images/mmi-3.jpg">
-		    </div>
-	  	</div>
-	  	<div class="overlay overlay-scale"> <!-- or overlay-slidedown -->
-			<button type="button" class="overlay-close">
-			</button>
-			<nav>
-				<ul>
-					<li><a href="./home.html">Accueil</a></li>
-					<li><a href="./about.html">A propos</a></li>
-					<li><a href="#">Contact</a></li>
-					<li class="social">
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-linkedin"></i>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</section>
+	</div> <!-- full-screen menu (overlay) -->
+	<script src="./js/classie.js"></script><!-- class call optimization -->
+	<script src="./js/fullscreenmenu.js"></script><!-- overlay display -->
 	<script src="./js/jquery-1.11.1.min.js"></script>
-	<script src="js/classie.js"></script>
-	<script src="js/fullscreenmenu.js"></script>
+	<script src="./js/dragdealer.min.js"></script><!-- draggable carousel -->
+	<script src="./js/dots.js"></script><!-- animate dots from carousel navigation when clicking -->
 	<script>
 	$(document).ready(function() {
 
@@ -116,9 +111,39 @@
 		$( '.overlay-close' ).click(function() {
 			$( '.ui.menu' ).fadeIn(200);
 		});
+
+		/* draggable carousel */
+	   	var slideshow = new Dragdealer('carousel', {
+				steps: 4,
+				speed: 0.2,
+				loose: true,
+				requestAnimationFrame: true,
+				callback: function(x, y) {
+					$('.dotstyle ul li').removeClass('current');
+					if (x==0){
+						$('.dotstyle ul li:nth-child(1)').addClass('current');
+					}else if (x==1/3){
+						$('.dotstyle ul li:nth-child(2)').addClass('current');
+					}else if (x==2/3){
+						$('.dotstyle ul li:nth-child(3)').addClass('current');
+					}else if (x==1){
+						$('.dotstyle ul li:nth-child(4)').addClass('current');
+					}
+				}
+			});
+		
+		/* linking dot navigation to the carousel */
+		[].slice.call( document.querySelectorAll( '.dotstyle > ul' ) ).forEach( function( nav ) {
+				new DotNav( nav, {
+					callback : function( idx ) {
+						/*console.log( idx );*/
+						idx++;
+						slideshow.setStep(idx,1,false);
+						slideshow.reflow; /* for responsive wrapper */
+					}
+				} );
+			} );
+
 	});
 	</script>
-	<footer>
-		<p>©2014 Juste ici pour décorer</p>
-	</footer>
 </body>

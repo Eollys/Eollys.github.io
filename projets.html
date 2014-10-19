@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Text Testing Page</title>
+	<meta name="description" content="Text display on different devices" />
+	<meta name="keywords" content="page template projects" />
+	<meta name="author" content="Eollys" />
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" href="./font-awesome-4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./semantic/collections/grid.min.css">
+	<link rel="stylesheet" href="./semantic/collections/menu.min.css">
+	<link rel="stylesheet" type="text/css" href="./overlayscale.css" />
+	<link rel="stylesheet" type="text/css" href="./style.css"> 
+	<script src="js/modernizr.custom.js"></script>
+</head>
+<body class="project-page">
+	<nav class="ui menu">
+		<a class="item" href="./index.html"></a>
+		<div class="right menu">
+			<a class="item" id="trigger-overlay"></a>
+		</div>
+	</nav>
+	<section>	
+		<div class="project case-1">
+			<a href="./case1.html">
+				<h3>CLA Besançon</h3>
+				<p>Réaliser la refonte complète du site English Online France</p>
+			</a>
+		</div>
+		<div class="project case-2">
+			<a href="./case2.html">
+				<h3>SMIBA</h3>
+				<p>Réaliser la refonte complète du site English Online France</p>
+			</a>
+		</div>
+		<div class="project case-3">
+			<a href="./case3.html">
+				<h3>Comptoir Bavarois</h3>
+				<p>Réaliser la refonte complète du site English Online France</p>
+			</a>
+		</div>
+		<div class="project case-4">
+			<a href="./case4.html">
+				<h3>MMI Montbéliard</h3>
+				<p>Réaliser la refonte complète du site English Online France</p>
+			</a>
+		</div>
+	</section>
+
+	<div class="overlay overlay-scale"> <!-- or overlay-slidedown -->
+		<button type="button" class="overlay-close">
+		</button>
+		<nav>
+			<ul>
+				<li><a href="./index.html">Accueil</a></li>
+				<li><a href="./projets.html">Projets</a></li>
+				<li><a href="./about.html">A propos</a></li>
+				<li class="separator"><p>//</p></li>
+				<li class="contact"><a href="mailto:romainwirtz2@gmail.com">romainwirtz2@gmail.com</a></li>
+				<li class="social">
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+	<script src="./js/jquery-1.11.1.min.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/fullscreenmenu.js"></script>
+	<script>
+	$(document).ready(function() {
+
+		/* fading navicon when clicking on it */
+		$( 'a#trigger-overlay' ).click(function() {
+			$( '.ui.menu' ).fadeOut(200);
+		});
+		$( '.overlay-close' ).click(function() {
+			$( '.ui.menu' ).fadeIn(200);
+		});
+	});
+	</script>
+	<footer>
+		<p>©2014 Eollys</p>
+	</footer>
+</body>

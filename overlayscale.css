@@ -46,14 +46,14 @@
 .overlay ul li {
 	display: block;
 	height: 20%;
-	height: calc(100% / 5);
-	min-height: 54px;
+	/*height: calc(100% / 5);*/
+	min-height: 5.4rem;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
 
 .overlay ul li a {
-	font-size: 54px;
+	font-size: 5.4rem;
 	font-weight: 900;
 	display: block;
 	letter-spacing: 3px;
@@ -63,18 +63,37 @@
 	transition: color 0.2s;
 }
 
+.overlay ul li.separator{
+	height: 15%;
+	cursor: default;
+}
+.overlay ul li.contact{
+	height: 10%;
+}
+
+.overlay ul li.separator p{
+	color: #fff;
+	margin: 0;
+	font-size: 2rem;
+	letter-spacing: 2px;
+}
+
+.overlay ul li.contact a{
+	font-weight: 300;
+	font-size: 2.4rem;
+	letter-spacing: 2px;
+}
 .overlay ul li.social a{
 	display: inline-block;
 	text-align: center;
 	margin: auto 1.8rem;
 }
+
 .overlay ul li a:hover,
 .overlay ul li a:focus {
 	color: #DCC4AC;
 }
-.overlay ul li.social a i{
-	padding-top: 20%;
-}
+
 /* Effects */
 .overlay-scale {
 	visibility: hidden;
@@ -93,14 +112,15 @@
 	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
 	transition: transform 0.4s, opacity 0.4s;
 }
-/*
-@media screen and (max-height: 30.5em) {
+
+@media screen and (max-width: 750px) { 
 	.overlay nav {
 		height: 70%;
-		font-size: 34px;
 	}
-	.overlay ul li {
-		min-height: 34px;
+	.overlay .overlay-close {
+		right: 20px;
+		top: 20px;
+		width: 5rem;
+		height: 5rem;
 	}
 }
-*/

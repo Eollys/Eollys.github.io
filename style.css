@@ -67,7 +67,7 @@ a{
 	text-decoration: none;
 }
 
-body#home-page nav{
+nav.ui.menu{
 	background: none;
 	position: absolute;
 	width: 100%;
@@ -128,21 +128,40 @@ IMAGE CAROUSEL
 	background-position: center top;
 	background-size: cover;
 }
-.slide.img1{
+
+.slide.step1{
 	background: url(./images/bg1.jpg);
-	background-color: rgba(252,184,87,0.8);
+	background-color: rgba(223,84,70,0.8); /* rouge */
 }
-.slide.img2{
+.step1 .link-btn:hover,
+.step1 .link-btn:focus{
+	color: #DF5446; /* rouge */
+}
+
+.slide.step2{
 	background: url(./images/bg2.jpg);
-	background-color: #72C8B3;
+	
 }
-.slide.img3{
+.step2 .link-btn:hover,
+.step2 .link-btn:focus{
+	color: #72C8B3; /* bleu */
+}
+
+.slide.step3{
 	background: url(./images/bg3.jpg);
-	background-color: #DF5446;
+	
 }
-.slide.img4{
+.step3 .link-btn:hover,
+.step3 .link-btn:focus{
+	color: #DCC4AC; /* beige */
+}
+
+.slide.step4{
 	background: url(./images/bg4.jpg);
-	background-color: #DCC4AC;
+}
+.step4 .link-btn:hover,
+.step4 .link-btn:focus{
+	color: #FCB857; /* jaune */
 }
 
 .info{
@@ -174,8 +193,8 @@ IMAGE CAROUSEL
 .info .link-btn:hover,
 .info .link-btn:focus{
 	background-color: #fff;
-	color: #ACC7BA;
 }
+
 #slider-nav{
 	position: absolute;
 	top: 90%;
@@ -253,7 +272,7 @@ IMAGE CAROUSEL
 ==================== 
 */
 .link-btn{
-	border: 1px solid #72C8B3;
+	border: 2px solid #72C8B3;
 	border-radius: 1rem;
 	text-decoration: none;
 	font-size: 2rem;
@@ -270,10 +289,11 @@ div.avatar {
 }
 div.avatar-img {
 	margin: 0 auto;
-	height: 140px;
-	width: 140px;
-	border-radius: 70px;
+	height: 14rem;
+	width: 14rem;
+	border-radius: 7rem;
 	background: url(./images/avatar.png) center no-repeat;
+	background-size: cover;
 }
 .exposition h2{
 	text-align: left;
@@ -306,17 +326,11 @@ div.five.column.row.tasks{
 }
 div.award .column{
 	width: 50% !important;
+	padding-bottom: 50px;
 }
-div.award .column i.fa {
-	font-size: 5rem;
-	padding: 25px;
-	margin-top: 25px;
-	color: white;
-	text-align: center;
-	background-color: #FCB857;
-	height: 5rem;
-	width: 5rem;
-	border-radius: 5rem;
+div.award span{
+	margin-top: 15px;
+	color: #FCB857;
 }
 
 /* tasks row */
@@ -337,8 +351,7 @@ div.tasks p, .award p{
 }
 header {
 	height: 600px;
-	background: url(./images/ballon-alsace-rw@2x.jpg) no-repeat center;
-	background-attachment: fixed;
+	background: url(./images/ballon-alsace-rw@2x.jpg) no-repeat top center;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -438,50 +451,37 @@ footer p{
 	color: rgba(58,52,54,0.6);
 }
 
-/* higher resolution images */
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-max-device-pixel-ratio: 2/1), only screen and (max--moz-device-pixel-ratio: 2), only screen and (max-device-pixel-ratio: 2) {
-	
-	header {
-		background-attachment: scroll;
-	}
-
-	footer {
-		background: url(./images/pixel-skyline.png) center no-repeat;
-	}	
-
-}
-
 /*
-===============
- TEXT TEMPLATE
-===============
+==============
+ PROJECT PAGE
+==============
 */
-#text-template header {
-	background: url(./images/mmi-montbeliard.jpg) center no-repeat;
+.project-page header {
 	background-size: cover;
 }
-#text-template .column.caption {
+
+.project-page .column.caption {
 	margin-bottom: 30px;
 }
 
-#text-template h1, #text-template h2, 
-#text-template p {
+.project-page h1, .project-page h2, 
+.project-page p {
 	font-family: "Lato";
 	font-weight: 300;
 	color: #3A3436;
 	margin: 0;
 }
-#text-template h1 {
+.project-page h1 {
 	font-size: 4.8rem;
 	margin: 50px auto;
 }
 
-#text-template p {
+.project-page p {
 	font-size: 2.8rem;
 	line-height: 4rem;
 	margin-bottom: 30px;
 }
-#text-template a.link-btn {
+.project-page a.link-btn {
 	display: inline-block;
 	margin: 4px 0;
 	padding: 10px 30px;
@@ -492,44 +492,43 @@ footer p{
 	letter-spacing: 1px;
 }
 
-#text-template .exposition h2 {
+.project-page .exposition h2 {
 	font-weight: 400;
 	font-size: 2.4rem;
 	line-height: 3.4rem;
 	letter-spacing: 0px;
 	margin: 20px auto;
 }
-#text-template .exposition p {
+.project-page .exposition p {
 	font-size: 2.2rem;
 	line-height: 3.4rem;
 	margin-bottom: 20px;
 }
 
-#text-template .tasks p, 
-#text-template .award p {
+.project-page .tasks p, 
+.project-page .award p {
 	font-weight: 400;
 	font-size: 1.8rem;
 	line-height: 2.8rem;
 	margin-top: 20px;
 }
 
-#text-template .tasks {
+.project-page .tasks {
 	padding-bottom: 20px;
 	border-bottom: thin solid rgba(0,0,0,0.1);
 }
 
-#text-template .project {
-	background: url(./images/bg3.jpg) center no-repeat;
-	background-size: cover;
+.project-page .project {
 	text-align: center;
-	margin-top: 30px;
+	/*padding-top: 60px;*/
 }
-#text-template .project p {
+.project-page .project p {
 	margin: 0;
-	color: #fff;
+	color: #fff;	
+	padding-left: 50px;
+	padding-right: 50px;
 }
-
-#text-template .project h3::after { 
+.project-page .project h3::after { 
 	display: block;
 	text-align: center;
     padding-top: 10px;
@@ -538,25 +537,101 @@ footer p{
     content: "//";
 }
 
-#text-template .project h3 {
+.project-page .project h3 {
 	color: #fff;
 	margin: 0;
 }
-#text-template .project a {
+.project-page .project a {
 	display: inline-block;
 	width: 100%;
 	padding: 150px 0;
 }
 
-#text-template footer p {
+.project-page footer p {
 	color: rgba(255,255,255,0.2);
 	font-size: 1.8rem;
+
+}
+
+
+
+div.project.case-1 a{
+	background-color: rgba(223,84,70,0.8);
+}
+div.project.case-2 a{
+	background-color: rgba(114,200,179,0.8);
+}
+div.project.case-3 a{
+	background-color: rgba(220,196,172,0.8);
+}
+div.project.case-4 a{
+	background-color: rgba(252,184,87,0.8);
+}
+
+div.project a{
+	transition: background-color 1.2s;
+}
+div.project a:hover{
+	background-color: transparent;
+}
+
+
+/* CASE 1 */
+.project-page#case-1 header,
+.project.case-1{
+	background: url(./images/cla@2x.jpg) center no-repeat;
+	background-size: cover;
+}
+.project-page#case-1 .project {
+	background: url(./images/bg2.jpg) center no-repeat;
+	background-size: cover;
+}
+/* CASE 2 */
+.project-page#case-2 header,
+.project.case-2{
+	background: url(./images/ballon-alsace-rw.jpg) center no-repeat;
+	background-size: cover;
+}
+.project-page#case-2 .project {
+	background: url(./images/bg3.jpg) center no-repeat;
+	background-size: cover;
+}
+/* CASE 3 */
+.project-page#case-3 header,
+.project.case-3{
+	background: url(./images/mmi-montbeliard-rw@2x.jpg) center no-repeat;
+	background-size: cover;
+}
+.project-page#case-3 .project {
+	background: url(./images/bg4.jpg) center no-repeat;
+	background-size: cover;
+}
+/* CASE 4 */
+.project-page#case-4 header,
+.project.case-4{
+	background: url(./images/comptoir-rw.jpg) center no-repeat;
+	background-size: cover;
+}
+.project-page#case-4 .project {
+	background: url(./images/bg1.jpg) center no-repeat;
+	background-size: cover;
 }
 
 
 /* Small devices */
 @media screen and (max-width: 750px) { 
 	html { font-size: 50%; }
+
+	header {
+		height: 400px;
+		background-attachment: scroll;
+	}
+	header nav.ui.menu a.item{
+		margin: 20px;
+		width: 5rem;
+		height: 5rem;
+	}
+
 	.five.column.row .column {
 		display: block;
 		width: 100%;
@@ -565,6 +640,7 @@ footer p{
 	div.award .column{
 		width: 80% !important;
 	}
+
 	.timeline-icon {
 		width: 60px;
 		height: 60px;
@@ -578,14 +654,13 @@ footer p{
 	#timeline::before {
 		left: 40%;
 	}
-	header {
-		height: 400px;
-		background-attachment: scroll;
+
+	.project-page .project a {
+		padding: 50px 0;
 	}
-	header nav.ui.menu a.item{
-		margin: 20px;
-		width: 5rem;
-		height: 5rem;
+	footer{
+		height: 100px;
+		background-size: 450px;
 	}
 }
 
@@ -593,5 +668,19 @@ footer p{
 @media screen and (min-width: 750px) and (max-width: 970px) { 
 	div.award .column{
 		width: 75% !important;
+	}
+	header{
+		height: 500px;
+	}
+	.project-page .project a {
+		padding: 100px 0;
+	}
+}
+
+/* Retina display */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-max-device-pixel-ratio: 2/1), only screen and (max--moz-device-pixel-ratio: 2), only screen and (max-device-pixel-ratio: 2) {
+	
+	header {
+		background-attachment: scroll;
 	}
 }

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Text Testing Page</title>
+	<meta name="description" content="Text display on different devices" />
+	<meta name="keywords" content="page template projects" />
+	<meta name="author" content="Eollys" />
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" href="./font-awesome-4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./semantic/collections/grid.min.css">
+	<link rel="stylesheet" href="./semantic/collections/menu.min.css">
+	<link rel="stylesheet" type="text/css" href="./overlayscale.css" />
+	<link rel="stylesheet" type="text/css" href="./style.css"> 
+	<script src="js/modernizr.custom.js"></script>
+</head>
+<body class="project-page" id="case-1">
+	<header>
+		<nav class="ui menu">
+			<a class="item" href="./index.html"></a>
+			<div class="right menu">
+				<a class="item" id="trigger-overlay"></a>
+			</div>
+		</nav>
+	</header>
+	<section class="ui center aligned page grid">
+		<div class="row">
+			<div class="column caption">
+				<h1>Réaliser la refonte complète du site English Online France</h1>
+				<p>Le faux-texte (également appelé lorem ipsum, lipsum) est, en imprimerie, un texte sans valeur sémantique, permettant de remplir des pages lors d'une mise en forme afin d'en calibrer le contenu en l'absence du texte définitif.</p>
+				<p>Généralement, on utilise un texte en faux latin (le texte ne veut rien dire, il a été modifié), le Lorem ipsum ou Lipsum, qui permet donc de faire office de texte d'attente.</p>
+				<a href="./about.html" class="link-btn">Voir le site</a>
+			</div>
+		</div>
+		<div class="five column row tasks">
+	  		<h3>Tâches réalisées</h3>
+		    <div class="column">
+				<i class="fa fa-stethoscope"></i>
+				<p>Audit</p>
+		    </div>
+		    <div class="column">
+				<i class="fa fa-pencil"></i>
+				<p>Conception<p>
+		    </div>
+		    <div class="column">
+				<i class="fa fa-wrench"></i>
+				<p>Développement<p>
+		    </div>
+		    <div class="column">
+				<i class="fa fa-puzzle-piece"></i>
+				<p>Intégration<p>
+		    </div>
+		    <div class="column">
+				<i class="fa fa-comments-o"></i>
+				<p>Formation<p>
+		    </div>
+	  	</div>
+		<div class="row">
+		    <div class="column exposition">	
+				<h2>Se familiariser au design d'interface</h2>
+				<p>Le travail donné consiste à concevoir des maquettes d'interfaces numérique du prochain site du département des Métiers du Multimédia et de L'Internet.</p> 
+				<p>Ces interfaces sont réalisés suivant un système de grille. Le rendu des mock-ups se fait notamment à travers l'usage d'un logiciel de wireframing Axure Pro en plus d'un logiciel d'édition de visuel comme Adobe Illustrator. Il est aussi convenu de respecter à travers la réalisation des maquettes une cohérence dans la navigation au sein du futur site MMI.</p>
+		    </div>
+	  	</div>
+	  	<div class="row">
+		    <div class="column exposition">	
+				<h2>Un modèle de page pour chaque thème abordé</h2>
+				<p>Le projet met en évidence 4 modèles distincts selon l'architecture de l'information définie au préalable. Les projets, la page d'accueil, les formations puis les actus.</p> 
+				<p>Les modèles de page sont présenté ici dans l'ordre dans lesquels ils viennent d'être énumérés.</p>
+		    </div>
+	  	</div>
+	  	
+	  	<div class="row award">	  		
+	  		<div class="column">
+				<h3>Mention spéciale</h3>
+				<span class="fa-stack fa-5x">
+				  	<i class="fa fa-certificate fa-stack-2x "></i>
+				  	<i class="fa fa-trophy fa-stack-1x fa-inverse"></i>
+				</span>
+		      	<p>Ce projet a répondu à la demande de l'établissement dans son intégralité et a été accompli dans les délais. Une fièreté !</p>
+		      	<a href="./about.html" class="link-btn">Lire la lettre de recommandation</a>
+	  		</div>
+	  	</div>
+	  	<!-- PROJET ETUDIANT
+	  	<div class="row award">
+	  		<div class="column">
+				<h3>Projet étudiant</h3>
+		      	<i class="fa fa-mortar-board"></i>
+		      	<p>Ce projet a été réalisé au cours de ma formation en Licence Professionnelle de Web Design.</p>
+	  		</div>
+	  	</div>
+	  	-->
+	  	<div class="overlay overlay-scale"> <!-- or overlay-slidedown -->
+			<button type="button" class="overlay-close">
+			</button>
+			<nav>
+				<ul>
+					<li><a href="./index.html">Accueil</a></li>
+					<li><a href="./projets.html">Projets</a></li>
+					<li><a href="./about.html">A propos</a></li>
+					<li class="separator"><p>//</p></li>
+					<li class="contact"><a href="mailto:romainwirtz2@gmail.com">romainwirtz2@gmail.com</a></li>
+					<li class="social">
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+	<div class="project">
+		<a href="./case2.html">
+			<h3>Projet suivant</h3>
+			<p>Développer un prototype de nouveau site à partir de celui déjà existant</p>
+		</a>
+	</div>
+	<script src="./js/jquery-1.11.1.min.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/fullscreenmenu.js"></script>
+	<script>
+	$(document).ready(function() {
+
+		/* fading navicon when clicking on it */
+		$( 'a#trigger-overlay' ).click(function() {
+			$( '.ui.menu' ).fadeOut(200);
+		});
+		$( '.overlay-close' ).click(function() {
+			$( '.ui.menu' ).fadeIn(200);
+		});
+	});
+	</script>
+	<footer>
+		<p>©2014 Eollys</p>
+	</footer>
+</body>
