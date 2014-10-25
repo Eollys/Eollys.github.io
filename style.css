@@ -341,9 +341,13 @@ CAROUSEL
 	box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.4);
 	filter:progid:DXImageTransform.Microsoft.Shadow(color=#000, Direction=180, Strength=8);
 }
-.exposition img.no-shadow {
+img.no-shadow {
 	box-shadow: none;
 }
+img.full-width {
+	width: 100%;
+}
+
 /*
 ** Additional informations rows
 */
@@ -740,10 +744,6 @@ RESPONSIVE STYLING
 
 	.project-page .project a {
 		padding: 15% 0;
-	}
-	footer {
-		height: 100px;
-		background-size: 450px;
 	}
 }
 
