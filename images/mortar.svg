@@ -5,13 +5,13 @@
 	 width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
 <g id="Picto_Etude_2_">
 	<g id="triangle_1_">
-		<path fill="none" stroke="#CF4661" stroke-miterlimit="10" d="M23.851,28.147c-0.205,0.511,0.078,1.108,0.628,1.108h2.555
+		<path fill="none" stroke="#DF5446" stroke-miterlimit="10" d="M23.851,28.147c-0.205,0.511,0.078,1.108,0.628,1.108h2.555
 			c0.55,0,0.805-0.585,0.565-1.08l-1.621-3.443c-0.239-0.495-0.602-0.438-0.807,0.073L23.851,28.147z"/>
 	</g>
-	<path fill="none" stroke="#CF4661" stroke-miterlimit="10" d="M25.543,24.312c-1.074-1.774,1.729-3.473,2.473-4.876
+	<path fill="none" stroke="#DF5446" stroke-miterlimit="10" d="M25.543,24.312c-1.074-1.774,1.729-3.473,2.473-4.876
 		c1.07-2.217-1.6-3.936-2.26-5.783"/>
 	<g>
-		<path fill="none" stroke="#CF4661" stroke-miterlimit="10" d="M17.845,17.831c-0.973,0.515-2.564,0.515-3.537,0L2.376,11.529
+		<path fill="none" stroke="#DF5446" stroke-miterlimit="10" d="M17.845,17.831c-0.973,0.515-2.564,0.515-3.537,0L2.376,11.529
 			c-0.973-0.515-0.973-1.355,0-1.869l11.932-6.304c0.973-0.514,2.564-0.514,3.537,0L29.776,9.66c0.973,0.514,0.973,1.354,0,1.869
 			L17.845,17.831z"/>
 	</g>

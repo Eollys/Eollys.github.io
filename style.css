@@ -93,7 +93,8 @@ a.link-btn:hover, .link-btn:focus {
 ** Header
 */
 header {
-	height: 600px;
+	min-height: 200px;
+	padding-bottom: 20%;
 	background: url(./images/ballon-alsace-rw@2x.jpg) no-repeat top center;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
@@ -101,7 +102,7 @@ header {
     background-size: cover;
 }
 body#about-page header{
-	background-image: url(./images/champ-rw@2x.jpg);
+	background-image: url(./images/champ.jpg);
 }
 /*
 ** Footer
@@ -190,7 +191,7 @@ CAROUSEL
 */
 .slide.step1 {
 	background: url(./images/bg1.jpg);
-	background-color: rgba(223,84,70,0.8); /* rouge */
+	background-color: rgba(223,84,70,0.8); /* rouge 0.8 opacity */
 }
 .step1 .link-btn:hover,
 .step1 .link-btn:focus {
@@ -239,7 +240,11 @@ CAROUSEL
 	margin-left: 10%;
 	margin-right: 10%;
 }
-.info p.description{
+.info h2{
+	text-align: center;
+	color: #fff;
+	margin-left: 10%;
+	margin-right: 10%;
 	font-size: 7rem;
 	line-height: 7.4rem;
 	font-weight: 300;
@@ -512,9 +517,9 @@ DEVICES MOCK UP DEMO
 	width: 80px;
 	height: 80px;
 	left: 50%;
-	margin-left: -41px;
+	margin-left: -40px;
 	background: #fff;
-	border: solid thin #CF4661;
+	border: solid thin #DF5446;
 	border-radius: 42px;
 	-webkit-transform: translateZ(0);
 	-webkit-backface-visibility: hidden;
@@ -538,10 +543,15 @@ DEVICES MOCK UP DEMO
 	float: right;
 	text-align: left;
 }
-.timeline-content h2, .timeline-content p {
+.timeline-content h2 {
 	margin: 0;
 	line-height: 3rem;
 }
+.timeline-content p {
+	margin-top: 1rem;
+	line-height: 2rem;
+}
+
 .timeline-date{
 	position: absolute;
 	display: inline-block;
@@ -550,7 +560,7 @@ DEVICES MOCK UP DEMO
 	text-align: center;
 	top: 12px;
 	font-size: 2rem;
-	color: rgba(58,52,54,0.6);
+	color: #FCB857;
 }
 /* 
 ** Avatar image block 
@@ -653,6 +663,7 @@ div.project a:hover{
 .project.case-1{
 	background: url(./images/cla@2x.jpg) center no-repeat;
 	background-size: cover;
+	background-color: rgba(223,84,70,0.8);
 }
 .project-page#case-1 .project {
 	background: url(./images/bg2.jpg) center no-repeat;
@@ -663,6 +674,7 @@ div.project a:hover{
 .project.case-2{
 	background: url(./images/ballon-alsace-rw.jpg) center no-repeat;
 	background-size: cover;
+	background-color: rgba(114,200,179,0.8);
 }
 .project-page#case-2 .project {
 	background: url(./images/bg3.jpg) center no-repeat;
@@ -673,6 +685,7 @@ div.project a:hover{
 .project.case-3{
 	background: url(./images/mmi-montbeliard-rw.jpg) center no-repeat;
 	background-size: cover;
+	background-color: rgba(220,196,172,0.8);
 }
 .project-page#case-3 .project {
 	background: url(./images/bg4.jpg) center no-repeat;
@@ -683,6 +696,7 @@ div.project a:hover{
 .project.case-4{
 	background: url(./images/comptoir-rw.jpg) center no-repeat;
 	background-size: cover;
+	background-color: rgba(252,184,87,0.8);
 }
 .project-page#case-4 .project {
 	background: url(./images/bg1.jpg) center no-repeat;
@@ -699,17 +713,13 @@ RESPONSIVE STYLING
 @media screen and (max-width: 750px) { 
 	html { font-size: 50%; }
 
-	header {
-		height: 250px;
-		background-attachment: scroll;
-	}
 	header nav.ui.menu a.item{
 		margin: 20px;
 		width: 5rem;
 		height: 5rem;
 	}
 
-	.info p.description {
+	.info h2 {
 		font-size: 3rem;
 		line-height: 4rem;
 	}
@@ -753,21 +763,13 @@ RESPONSIVE STYLING
 	div.award .column {
 		width: 75% !important;
 	}
-	header {
-		height: 300px;
-	}
 	.project-page .project a {
 		padding: 100px 0;
 	}
 }
 
 /* Large devices */
-@media screen and (min-width: 970px) and (max-width: 1200px) { 
-
-	header {
-		height: 400px;
-	}
-}
+@media screen and (min-width: 970px) and (max-width: 1200px) { }
 
 /* Retina display */
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-max-device-pixel-ratio: 2/1), only screen and (max--moz-device-pixel-ratio: 2), only screen and (max-device-pixel-ratio: 2) {
