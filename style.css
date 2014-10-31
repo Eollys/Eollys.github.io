@@ -103,6 +103,7 @@ header {
 }
 body#about-page header{
 	background-image: url(./images/champ.jpg);
+	background-color:#2B2728;
 }
 /*
 ** Footer
