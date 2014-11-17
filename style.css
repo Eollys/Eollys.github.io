@@ -65,7 +65,7 @@ p {
 	font-weight: 300;
 	font-size: 2.8rem;
 	line-height: 4rem;
-	color: #3A3436;
+	color: #6d6365;
 }
 a {
 	text-decoration: none;
@@ -73,7 +73,7 @@ a {
 }
 a.link-btn {
 	display: inline-block;
-	margin: 4px 0;
+	margin: 4px 0 10px 0;
 	padding: 1.2rem 3rem;
 	border: 2px solid #72C8B3;
 	border-radius: 0.8rem;
@@ -192,7 +192,8 @@ CAROUSEL
 */
 .slide.step1 {
 	background: url(./images/bg1.jpg);
-	background-color: rgba(223,84,70,0.8); /* rouge 0.8 opacity */
+	background-color: rgba(223,84,70,0.8); 
+	opacity: 0;/* rouge 0.8 opacity */
 }
 .step1 .link-btn:hover,
 .step1 .link-btn:focus {
@@ -234,6 +235,7 @@ CAROUSEL
 .info {
 	display: table-cell;
 	vertical-align: middle;
+	opacity: 0;
 }
 .info p{
 	text-align: center;
@@ -246,8 +248,8 @@ CAROUSEL
 	color: #fff;
 	margin-left: 10%;
 	margin-right: 10%;
-	font-size: 5.4rem;
-	line-height: 7.4rem;
+	font-size: 5rem;
+	line-height: 6rem;
 	font-weight: 300;
 	margin-top: 3rem;
 }
@@ -255,6 +257,7 @@ CAROUSEL
 	font-weight: 700;
 	color: #fff;
 	letter-spacing: 2px;
+	font-size: 2rem;
 }
 .info .link-btn{
 	color: #fff;
@@ -370,7 +373,6 @@ div.tasks p, div.award p, p.note {
 	letter-spacing: 1px;
 	font-size: 1.8rem;
 	line-height: 3rem;
-	color: #3A3436;
 }
 /* 
 ** Tasks row 

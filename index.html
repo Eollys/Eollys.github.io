@@ -20,8 +20,6 @@
 	<link rel="stylesheet" type="text/css" href="dragdealer.css">
 	<link rel="stylesheet" type="text/css" href="style.css"> 
 	<script src="js/modernizr.custom.js"></script>
-	<!-- Google Analytics tracking script -->
-	<script src="js/analytics.js"></script>
 </head>
 <body id="home-page">
 	<nav class="ui menu">
@@ -112,6 +110,9 @@
 	<script>
 	$(document).ready(function() {
 
+		/* Fade in text & background-img */
+		$('.slide.step1').animate({opacity: 1}, 800 );
+		$('.info').delay(200).animate({opacity: 1}, 800 );
 		/* fading navicon when clicking on it */
 		$( 'a#trigger-overlay' ).click(function() {
 			$( '.ui.menu' ).fadeOut(200);
