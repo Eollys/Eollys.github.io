@@ -111,8 +111,10 @@
 	$(document).ready(function() {
 
 		/* Fade in text & background-img */
-		$('.slide.step1').animate({opacity: 1}, 800 );
-		$('.info').delay(200).animate({opacity: 1}, 800 );
+		$('#slider-nav').css({'opacity':0}).delay(100).animate({opacity: 1}, 800 );
+		$('.ui.menu').css({'opacity':0}).delay(100).animate({opacity: 1}, 800 );
+		$('.slide.step1').delay(200).animate({opacity: 1}, 800 );
+		$('.info').delay(600).animate({opacity: 1}, 400 );
 		/* fading navicon when clicking on it */
 		$( 'a#trigger-overlay' ).click(function() {
 			$( '.ui.menu' ).fadeOut(200);
